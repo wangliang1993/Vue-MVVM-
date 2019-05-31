@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="a">
+        <div>{{a}}</div>
+    </div>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+    <script>
+        // 我们的数据都挂在到vm上
+        // Object.defineProperty get和set
+        // vue中实现双向绑定 1.模板的编译 2.数据劫持 观察数据变化 3.Watcher 观察者
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                a: '1111'
+            }
+        })
+    </script>
+</body>
+</html>
